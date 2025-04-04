@@ -1,0 +1,48 @@
+{
+    "info": {
+      "name": "Intuitive Care API",
+      "description": "API para busca de operadoras de saúde da ANS",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Buscar Operadoras",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8000/operadoras/?query=unimed",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8000",
+            "path": ["operadoras"],
+            "query": [
+              {
+                "key": "query",
+                "value": "unimed",
+                "description": "Termo para busca de operadoras"
+              }
+            ]
+          },
+          "description": "Busca operadoras de saúde por nome"
+        },
+        "response": []
+      },
+      {
+        "name": "Download Dados ANS",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8000/ans-download/",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8000",
+            "path": ["ans-download"]
+          },
+          "description": "Faz download e processamento dos dados da ANS"
+        },
+        "response": []
+      }
+    ]
+  }
